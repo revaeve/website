@@ -1,0 +1,7 @@
+<div class="card-wrap">
+  <h2 class="heading-text">Характеристики {{productData.name}}:</h2>
+  <div *ngFor="let specification of productData.specifications" class="text-specifications">
+    <p class="main-text specification-name">{{specification.name}}:</p>
+    <p class="main-text">{{specification.value}}</p>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+.reviews-title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+
+  .reviews-text {
+    display: flex;
+    align-items: center;
+
+    .card-wrap{
+      display: flex;
+
+      p {
+        color: #bfbfbf;
+      }
+
+    }
+
+    p{
+      margin-right: 1rem;
+      color: var(--text-color-secondary);
+    }
+
+  }
+
+}
+
+
+.reviews-wrap {
+  display: flex;
+  margin-top: 1rem;
+
+  .reviews {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  .filters {
+    margin-left: 1rem;
+    width: 350px;
+  }
+}
+
+.empty-reviews-place {
+  margin-top: 1rem;
+  background-color: white;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,17 @@
+::ng-deep .product-photo {
+
+  .p-galleria {
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+  }
+
+  .p-galleria-thumbnail-container {
+    background: #F8F8F8;
+    border-top: 1px solid #ced4da;
+
+    .p-galleria-thumbnail-prev, .p-galleria-thumbnail-next {
+      color: #ced4da;
+    }
+  }
+}
+

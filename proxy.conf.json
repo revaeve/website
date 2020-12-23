@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "http://192.168.31.143/",
+    "secure": false
+  },
+  "/images": {
+    "target": "http://192.168.31.143/api",
+    "secure": false
+  }
+}

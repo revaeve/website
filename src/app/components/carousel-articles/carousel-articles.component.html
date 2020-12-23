@@ -1,0 +1,29 @@
+<h2 class="heading-text">{{headingText}}</h2>
+
+<div class="carousel">
+  <p-carousel [value]="carouselArticles"
+              [numVisible]="3"
+              [numScroll]="3"
+              [circular]="true"
+              [responsiveOptions]="responsiveOptions">
+
+    <ng-template let-product pTemplate="item">
+      <div class="article-item">
+        <div class="article-item-content">
+          <div class="img-wrap">
+            <!--TODO: понять что с product... почему подчеркивается-->
+            <img src="{{product.image}}">
+          </div>
+
+          <div class="p-pt-4 p-px-3">
+            <h4 class="p-text-left p-mb-1">{{product.name}}</h4>
+            <p class="p-text-left p-mt-0">{{product.text}}</p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+  </p-carousel>
+</div>
+
+

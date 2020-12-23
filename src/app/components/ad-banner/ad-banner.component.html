@@ -1,0 +1,15 @@
+<div class="ad-banner p-pt-4">
+  <p-galleria [value]="images"
+              [autoPlay]="true"
+              [transitionInterval]="5000"
+              [containerStyle]="{'width': '100%'} "
+              [showThumbnails]="false"
+              [showIndicators]="true"
+              [showItemNavigators]="true"
+              [responsiveOptions]="responsiveOptions"
+              [numVisible]="5">
+    <ng-template pTemplate="item" let-item>
+      <img [src]="item.previewImageSrc" style="width: 100%; display: block; height: 300px; object-fit: cover;"/>
+    </ng-template>
+  </p-galleria>
+</div>

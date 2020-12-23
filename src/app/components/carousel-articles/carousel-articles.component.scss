@@ -1,0 +1,46 @@
+.carousel {
+  background-color: white;
+  margin-top: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+  border-radius: 3px;
+
+  .article-item {
+
+    .article-item-content {
+      border: 1px solid var(--surface-d);
+      background-color: white;
+      border-radius: 3px;
+      margin: .3rem;
+      text-align: center;
+      padding-bottom: 2rem;
+
+      img {
+        height: 10rem;
+        width: 100%;
+        object-fit: cover;
+        border-bottom: 1px solid var(--surface-d);
+      }
+
+      h4 {
+        color: var(--text-color);
+        font-weight: 300;
+        font-size: 1.25rem;
+      }
+
+      p {
+        color: var(--text-color-secondary);
+        font-weight: 200;
+      }
+
+    }
+
+  }
+
+  ::ng-deep .p-carousel .p-carousel-content .p-carousel-prev, ::ng-deep  .p-carousel .p-carousel-content .p-carousel-next {
+    color: #ced4da;
+  }
+
+}
+
+

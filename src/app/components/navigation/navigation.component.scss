@@ -1,0 +1,32 @@
+.navigation-block {
+  background-color: #e8e8e8;
+  width: 100%;
+}
+
+.nav-bar-wrap {
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+}
+
+::ng-deep .nav-bar {
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  border: none;
+
+  .p-megamenu-root-list {
+    display: flex;
+    justify-content: space-between;
+
+    .p-megamenu-panel{
+      right: 0;
+      top: 42px;
+      box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    .p-megamenu-end {
+      display: none;
+    }
+  }
+
+}

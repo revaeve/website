@@ -1,0 +1,21 @@
+<div class="card-wrap">
+  <h2 class="heading-text">{{inputRateData.heading}}</h2>
+
+  <div *ngFor="let data of inputRateData.data">
+
+    <div class="p-field-checkbox">
+      <p-checkbox
+        name="group1"
+        [value]="data.value"
+        [(ngModel)]="selectedStars"
+        (onChange)="onChangeFunc()"
+      ></p-checkbox>
+      <div class="rate-wrap">
+        <app-rating [stars]="data.stars"></app-rating>
+        <p class="main-text">{{data.info}}</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>

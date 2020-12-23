@@ -1,0 +1,58 @@
+<!-- Сортировка и выбраные фильтры   -->
+
+<!--<div class="reviews-title">-->
+
+<!--  <div class="reviews-text">-->
+<!--    <p>Выбрано {{selectedReviews}} отзывов:</p>-->
+<!--    <div class="filters-wrap">-->
+<!--      <p>{{filters[0]}}</p>-->
+<!--      <p>{{filters[1]}}</p>-->
+<!--      <p>{{filters[2]}}</p>-->
+<!--    </div>-->
+
+<!--  </div>-->
+
+<!--  <app-product-dropdown></app-product-dropdown>-->
+
+<!--</div>-->
+
+
+
+<div class="reviews-wrap" *ngIf = "reviewsTotal > 0">
+  <div class="reviews">
+    <app-product-reviews
+      *ngFor="let review of reviews"
+      [reviewDate]="review"
+    ></app-product-reviews>
+  </div>
+
+  <div class="filters">
+
+    <app-product-filters-selected
+      *ngIf = "showSelectedFilters"
+      [inputSelectedFiltersAsync]="selectedFilters$"
+    ></app-product-filters-selected>
+
+    <!-- TODO:LATER включить компонент позже -->
+
+    <!--    <app-product-filters-photo-->
+    <!--      (outputSelectedPhoto) = "updateSelectedFiltersPhoto($event)"-->
+    <!--    ></app-product-filters-photo>-->
+
+    <app-product-filters-rate
+      (outputSelectedStars) = "updateSelectedFiltersStars($event)"
+      [inputRateData]="filterData.rate"
+    ></app-product-filters-rate>
+
+    <product-filters-list-box
+      (outputSelectedWebSites) = "updateSelectedFiltersWebSites($event)"
+      [inputListBoxData]="filterData.listBox"
+    ></product-filters-list-box>
+
+  </div>
+
+</div>
+
+<div class="empty-reviews-place" *ngIf = "reviewsTotal <= 0">
+  <p class="main-text">У этого товара пока нет отзывов</p>
+</div>

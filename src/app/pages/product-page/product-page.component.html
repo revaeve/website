@@ -1,0 +1,57 @@
+<div class="p-grid p-jc-center">
+  <div class="p-col-10">
+
+    <!-- TODO:LATER включить компонент позже -->
+    <!-- ХЛЕБНЫЕ КРОШКИ   -->
+    <!-- <app-bread-crumb></app-bread-crumb>-->
+
+    <!--  --------------------------------------------------------------------------------------  -->
+
+    <!--  ИМЯ ПРОДУКТА  -->
+    <h2 class="heading-text product-heading-text">{{productData?.name}}</h2>
+
+    <!--  РЕЙТИНГ  -->
+    <div class="rating-wrap">
+      <app-rating [stars]="sumRating"></app-rating>
+      <p class="rating-text">{{reviewsData?.total}} отзывов</p>
+    </div>
+
+
+    <!--  ОПИСАНИЕ ПРОДУКТА  -->
+    <app-product-description
+      *ngIf="!!productData"
+      [productData]="productData"
+      (onShowMore)="updateSelectedTab($event)"
+    ></app-product-description>
+
+    <!--  --------------------------------------------------------------------------------------  -->
+
+    <!--TODO: DONE maybe you need to provide info about what tab is selected to 'app-product-tabs' component-->
+    <!-- ТАБ МЕНЮ ДЛЯ ПРОДУКТА   -->
+    <app-product-tabs
+      (onSelectTab)="updateSelectedTab($event)"
+    ></app-product-tabs>
+
+    <div class="tab-content">
+
+      <app-product-tab-reviews
+        *ngIf = "selectedTab === 'reviews'"
+        [reviews]="reviewsData?.result"
+        [reviewsTotal] = "reviewsData?.total"
+      ></app-product-tab-reviews>
+
+      <app-product-tab-about
+        *ngIf = "selectedTab === 'about'"
+        [productData]="productData"
+      ></app-product-tab-about>
+
+
+      <app-product-tab-specifications
+        *ngIf = "selectedTab === 'specifications'"
+        [productData]="productData"
+      ></app-product-tab-specifications>
+
+    </div>
+
+  </div>
+</div>

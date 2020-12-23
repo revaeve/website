@@ -1,0 +1,12 @@
+.item-rating {
+
+  ::ng-deep .p-rating .p-rating-icon{
+    color: #ced4d9;
+    font-size: 1rem;
+  }
+
+  ::ng-deep .p-rating .p-rating-icon.pi-star {
+    color: #FFC107;
+  }
+}
+

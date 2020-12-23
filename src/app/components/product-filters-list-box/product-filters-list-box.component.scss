@@ -1,0 +1,37 @@
+.card-wrap {
+  padding: 2rem;
+  background-color: white;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  .websites-listbox{
+    margin-top: 1rem;
+
+    ::ng-deep .p-checkbox .p-checkbox-box .p-checkbox-icon {
+      color: white;
+    }
+
+    ::ng-deep .p-listbox-list {
+
+      .p-listbox-item {
+        color: var(--text-color-secondary);
+        font-weight: 300;
+      }
+
+      .p-listbox-item.p-highlight {
+        background: #ffeeb8;
+        color: var(--text-color);
+
+        .p-checkbox .p-checkbox-box {
+          border-color: transparent;
+
+          .p-checkbox-icon {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,29 @@
+<h2 class="heading-text">{{headingText}}</h2>
+
+<div class="carousel">
+  <p-carousel [value]="carouselProducts"
+              [numVisible]="5"
+              [numScroll]="3"
+              [circular]="true"
+              [responsiveOptions]="responsiveOptions">
+
+    <ng-template  let-product pTemplate="item">
+      <div class="product-item">
+        <div class="product-item-content">
+
+          <div class="img-wrap">
+            <img src="{{product.image}}">
+          </div>
+
+          <div class="p-pt-4">
+            <h4 class="p-mb-1">{{product.name}}</h4>
+            <p class="p-mt-0 p-mb-3">{{product.text}}</p>
+            <app-rating [stars]="product.rating"></app-rating>
+
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+  </p-carousel>
+</div>

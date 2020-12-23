@@ -1,0 +1,45 @@
+.p-dropdown {
+  width: 14rem;
+  font-weight: normal;
+}
+
+.product-name {
+  color: var(--text-color);
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+.product-category {
+  color: var(--text-color-secondary);
+  font-weight: 200;
+}
+
+.product-grid-item {
+  margin: .5em;
+  border: 1px solid #dee2e6;
+
+  .product-grid-item-top,
+  .product-grid-item-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  img {
+    height: 10rem;
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid var(--surface-d);
+    margin-bottom: 1.5rem;
+  }
+
+  .product-grid-item-content {
+    text-align: center;
+  }
+
+}
+
+.p-component-overlay {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+

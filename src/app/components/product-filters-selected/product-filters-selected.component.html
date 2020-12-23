@@ -1,0 +1,20 @@
+<div class="selected-filters-wrap">
+  <h2 class="heading-text">Выбраные фильтры:</h2>
+  <div class="tags-wrap">
+    <button
+      *ngFor="let selectedFilter of selectedFilters"
+      pButton
+      type="button"
+      [label]="selectedFilter"
+      icon="pi pi-times"
+      class="p-button-outlined web-sites-tag"
+      disabled="true">
+    </button>
+  </div>
+  <button
+    pButton
+    type="button"
+    label="Сбросить все"
+    class="web-sites-button">
+  </button>
+</div>

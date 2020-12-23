@@ -1,0 +1,51 @@
+.review-wrap {
+  background-color: white;
+  padding: 2rem;
+  margin-bottom: 1rem;
+
+  .review-heading-wrap{
+    display: flex;
+    align-items: center;
+
+    .review-heading-text{
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+
+    .tag-photo{
+      opacity: 100;
+      font-size: 0.75rem;
+      border-color: #f1f1f1;
+      font-weight: 300;
+      color: #ced4d9;
+    }
+
+  }
+
+
+  .review-text{
+    margin-top: 1rem;
+    word-wrap: break-word;
+  }
+
+  .aaa{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+
+    .abc {
+      flex-grow: 1;
+      flex-basis: 0;
+
+      .tag-place{
+        margin-right: 1rem;
+        opacity: 100;
+      }
+    }
+
+    .recommend-wrap{
+      display: flex;
+    }
+  }
+
+}

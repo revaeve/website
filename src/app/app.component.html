@@ -1,58 +1,18 @@
-<div class="p-mb-2">Margin bottom with level 2</div>
-
-<p-megaMenu [model]="items">
-  <button pButton label="Logout" icon="pi pi-sign-out"></button>
-</p-megaMenu>
-
-
-<button pButton type="button" class="p-button-info"></button>
-<button pButton type="button" label="Primary"></button>
-<button pButton type="button" label="Secondary" class="p-button-secondary"></button>
-<button pButton type="button" label="Success" class="p-button-success"></button>
-<button pButton type="button" label="Info" class="p-button-info"></button>
-<button pButton type="button" label="Warning" class="p-button-warning"></button>
-<button pButton type="button" label="Help" class="p-button-help"></button>
-<button pButton type="button" label="Danger" class="p-button-danger"></button>
+<header class="header-block">
+  <app-head></app-head>
+  <app-navigation></app-navigation>
+</header>
 
 
-<p-card header="Header">
-  <p class="p-text-left">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-    quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
-  </p>
-  <button pButton type="button" icon="pi pi-check" iconPos="left" class="p-mr-2"></button>
-  <p-button label="Click" icon="pi pi-check" iconPos="left"></p-button>
-</p-card>
+<main class="content-block">
+<!--  <app-main-page></app-main-page>-->
+<!--  <app-product-page></app-product-page>-->
+<!--  <app-products-catalog-page></app-products-catalog-page>-->
+  <router-outlet></router-outlet>
+</main>
 
 
-
-
-<p-card header="Advanced Card" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="p-card-shadow">
-  <p-header>
-    <img alt="Card" src="https://www.timeoutdubai.com/public/images/2020/07/13/IMG-Dubai-UAE.jpg">
-  </p-header>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-    quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
-  </p>
-  <ng-template pTemplate="footer">
-    <p-button label="Save" icon="pi pi-check"></p-button>
-  </ng-template>
-</p-card>
-
-
-
-<p-tabView>
-  <p-tabPanel header="Header 1">
-    Content 1
-  </p-tabPanel>
-  <p-tabPanel header="Header 2">
-    Content 2
-  </p-tabPanel>
-  <p-tabPanel header="Header 3">
-    Content 3
-  </p-tabPanel>
-</p-tabView>
-
+<footer class="footer-block">
+</footer>
 
 

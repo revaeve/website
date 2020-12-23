@@ -1,0 +1,124 @@
+<div class="p-grid p-jc-center">
+  <div class="p-col-10">
+
+
+    <!--      TODO:LATER включить компонент позже-->
+    <!-- ХЛЕБНЫЕ КРОШКИ   -->
+    <!--    <app-bread-crumb></app-bread-crumb>-->
+
+    <h2 class="heading-text products-catalog-heading-text">{{categoryHeading$ | async}}</h2>
+
+    <div class="products-catalog-wrap">
+
+      <div class="products-catalog-filters">
+
+        <app-product-filters-selected
+          *ngIf = "showSelectedFilters"
+          [inputSelectedFiltersAsync]="selectedFilters$"
+        ></app-product-filters-selected>
+
+
+        <app-product-filters-rate
+          (outputSelectedStars) = "updateSelectedFiltersStars($event)"
+          [inputRateData]="filterData.rate"
+        ></app-product-filters-rate>
+
+        <product-filters-list-box
+          (outputSelectedWebSites) = "updateSelectedFiltersWebSites($event)"
+          [inputListBoxData]="filterData.listBox"
+        ></product-filters-list-box>
+
+      </div>
+
+
+      <div class="products-catalog">
+        <p-dataView
+          #dv
+          [value]="products"
+          [paginator]="true"
+          [rows]="30"
+          filterBy="name"
+          [sortField]="sortField"
+          [sortOrder]="sortOrder"
+          layout="grid"
+          [loading]="showLoader"
+          [lazy]="true"
+          (onLazyLoad)="loadData($event)"
+          [totalRecords]="totalRecords"
+        >
+
+          <ng-template pTemplate="header">
+            <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
+              <p-dropdown
+                [options]="sortOptions"
+                [(ngModel)]="sortKey"
+                placeholder="Сортировать"
+                (onChange)="onSortChange($event)"
+                styleClass="p-mb-2 p-mb-md-0"
+              ></p-dropdown>
+
+              <!--      TODO:LATER включить компонент позже-->
+              <span class="p-input-icon-left p-mb-2 p-mb-md-0">
+                <i class="pi pi-search"></i>
+                <input
+                  type="search"
+                  disabled
+                  pInputText
+                  placeholder="Search by Name"
+                  (input)="dv.filter($event.target.value)"
+                >
+              </span>
+
+              <!--      TODO:LATER включить компонент позже-->
+              <!-- <p-dataViewLayoutOptions></p-dataViewLayoutOptions>-->
+            </div>
+          </ng-template>
+
+              <!-- СЕТКА -->
+              <ng-template let-product pTemplate="gridItem">
+                <div class="p-col-12 p-md-4">
+                  <div class="product-grid-item card" [routerLink]="['/product/' + product.id]">
+
+                    <div class="img-wrap">
+                      <img src="{{product.imageUrl}}">
+                    </div>
+
+                    <div class="product-grid-item-content">
+                      <span class="product-category">{{product.category}}</span>
+                      <div class="product-name">{{product.name}}</div>
+                      <app-rating [stars]="product.stars"></app-rating>
+                    </div>
+
+                  </div>
+                </div>
+              </ng-template>
+
+              <!--      TODO:LATER включить компонент позже-->
+              <!-- ЛИСТ -->
+              <!--      <ng-template let-product pTemplate="listItem">-->
+              <!--        <div class="p-col-12">-->
+              <!--          <div class="product-list-item">-->
+              <!--            <div class="product-list-detail">-->
+              <!--              <div class="product-name">{{product.name}}</div>-->
+              <!--              <div class="product-description">{{product.description}}</div>-->
+              <!--              <p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating>-->
+              <!--              <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{product.category}}</span>-->
+              <!--            </div>-->
+              <!--            <div class="product-list-action">-->
+              <!--              <span class="product-price">${{product.price}}</span>-->
+              <!--              <p-button icon="pi pi-shopping-cart" label="Add to Cart" [disabled]="product.inventoryStatus === 'OUTOFSTOCK'"></p-button>-->
+              <!--              <span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>-->
+              <!--            </div>-->
+              <!--          </div>-->
+              <!--        </div>-->
+              <!--      </ng-template>-->
+
+        </p-dataView>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+

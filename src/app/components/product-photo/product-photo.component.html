@@ -1,0 +1,24 @@
+<p-galleria [value]="images"
+            [responsiveOptions]="responsiveOptions"
+            [numVisible]="3"
+            [containerStyle]="{'width': '300px'}"
+            thumbnailsPosition="bottom"
+            class="product-photo">
+
+  <ng-template pTemplate="item" let-item>
+    <img
+      [src]="item.previewImageSrc"
+      style="height: 180px; padding: 1rem; display: block; object-fit: scale-down; background: white"
+    />
+  </ng-template>
+
+  <ng-template pTemplate="thumbnail" let-item>
+    <div class="p-grid p-nogutter p-justify-center">
+      <img
+        [src]="item.thumbnailImageSrc"
+        style="height: 60px; width: 60px; display: block; object-fit: scale-down; background: white"
+      />
+    </div>
+  </ng-template>
+
+</p-galleria>

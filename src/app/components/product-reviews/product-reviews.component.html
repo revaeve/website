@@ -1,0 +1,36 @@
+<div class="review-wrap">
+  <div class="review-heading-wrap">
+
+    <div class="review-heading-text">
+      <app-rating [stars]="reviewDate.stars"></app-rating>
+      <p class="main-text">Имя???, {{reviewDate.originalCreatedAt |  date }}</p>
+    </div>
+
+    <!-- TODO:LATER включить компонент позже -->
+    <!--    <button-->
+    <!--      *ngIf="reviewDate.reviewHavePhoto"-->
+    <!--      pButton-->
+    <!--      type="button"-->
+    <!--      label="Отзыв с фотографией"-->
+    <!--      class="p-button-outlined tag-photo"-->
+    <!--      disabled="true"-->
+    <!--    ></button>-->
+
+  </div>
+  <p class="main-text review-text">{{reviewDate.text}}</p>
+
+
+  <div class="aaa">
+    <div class="abc">
+      <button pButton type="button" [label]="reviewPlace" class="p-button-outlined tag-place" disabled="true"></button>
+    </div>
+
+    <!-- TODO:LATER включить компонент позже -->
+
+    <!--    <div class="recommend-wrap">-->
+    <!--      <app-recommend [iconClass]="'pi pi-thumbs-up'" [numbers]="reviewDate.reviewRecommendUp"></app-recommend>-->
+    <!--      <app-recommend [iconClass]="'pi pi-thumbs-down'" [numbers]="reviewDate.reviewRecommendDown"></app-recommend>-->
+    <!--    </div>-->
+
+  </div>
+</div>

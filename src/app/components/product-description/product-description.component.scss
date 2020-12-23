@@ -1,0 +1,58 @@
+.description-wrap {
+  background-color: white;
+  border-radius: 3px;
+  margin-top: 1.25rem;
+  padding: 2rem;
+  display: flex;
+}
+
+.product-photo{
+  width: 300px;
+}
+
+.text-product-wrap {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.text-product {
+  p{
+    margin-top: 0.5rem;
+  }
+}
+
+.specifications-wrap {
+  margin-top: 2rem;
+}
+
+.text-specifications-wrap{
+  display: flex;
+}
+
+.text-specifications {
+  display: flex;
+}
+
+.specification-name{
+  font-weight: 400;
+}
+
+.text-specifications-right, .text-specifications-left {
+  width: 50%;
+}
+
+.text-specifications-right {
+  position: relative;
+}
+
+.ad-banner {
+  min-width: 180px;
+  background-color: #f1f1f1;
+}
+
+.small-link-text-specifications{
+  position: absolute;
+  bottom: 0px;
+}
+
+

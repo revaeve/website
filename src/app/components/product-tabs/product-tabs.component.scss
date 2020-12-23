@@ -1,0 +1,30 @@
+::ng-deep .tab-menu{
+
+  .p-component {
+    margin-top: 2rem;
+
+    .p-tabmenu-nav {
+      display: flex;
+
+      .p-tabmenuitem {
+        flex-grow: 1;
+        .p-menuitem-link {
+          justify-content: center;
+          padding-top: 1.25rem;
+          padding-bottom: 1.25rem;
+        }
+        &:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link{
+          border-color: var(--primary-color);
+        }
+      }
+
+      .p-tabmenuitem.p-highlight .p-menuitem-link {
+        background: var(--primary-color);
+        color: white;
+      }
+
+    }
+  }
+}
+
+

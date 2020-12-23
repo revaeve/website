@@ -1,0 +1,25 @@
+<div class="card-wrap">
+
+  <h2 class="heading-text">{{inputListBoxData.heading}}</h2>
+
+  <p-listbox class="websites-listbox"
+    [options]="inputListBoxData.data"
+    [(ngModel)]="selectedWebSites"
+    [metaKeySelection]="false"
+    [checkbox]="true"
+    [filter]="true"
+    [multiple]="true"
+    optionLabel="name"
+    [listStyle]="{'max-height':'250px'}"
+    [style]="{'width':'100%'}"
+    (onChange)="onChangeFunc()">
+
+    <ng-template let-website pTemplate="item">
+      <div>
+        <div>{{website.value.name}}</div>
+      </div>
+    </ng-template>
+
+  </p-listbox>
+
+</div>

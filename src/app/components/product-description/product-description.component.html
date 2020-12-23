@@ -1,0 +1,46 @@
+<div class="description-wrap">
+
+  <app-product-photo
+    class="product-photo"
+    [mainImageUrl]="productData.mainImageUrl"
+    [imageUrls]="productData.imageUrls"
+  ></app-product-photo>
+
+  <div class="text-product-wrap">
+
+    <div class="text-product about-wrap">
+      <h2 class="heading-text">Коротко о товаре:</h2>
+      <p class="main-text">{{productData.description | slice:0:200}}
+        <a href="#" class="small-link" (click)="showMoreAboutProduct()">узнать больше</a>
+      </p>
+    </div>
+
+    <div class="text-product specifications-wrap">
+      <h2 class="heading-text">Характеристики:</h2>
+
+      <div class="text-specifications-wrap">
+        <div class="text-specifications-left">
+          <div *ngFor="let specification of productData.specifications | slice:0:4" class="text-specifications">
+            <p class="main-text specification-name">{{specification.name}}:</p>
+            <p class="main-text">{{specification.value}}</p>
+          </div>
+        </div>
+
+        <div class="text-specifications-right">
+          <div *ngFor="let specification of productData.specifications | slice:4:7" class="text-specifications">
+            <p class="main-text specification-name">{{specification.name}}:</p>
+            <p class="main-text">{{specification.value}}</p>
+          </div>
+          <a href="#" class="small-link-text-specifications small-link" (click)="showMoreSpecifications()">узнать больше</a>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <div  class="ad-banner"></div>
+
+</div>
+
