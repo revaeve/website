@@ -14,6 +14,47 @@
   }
 }
 
+.product-description-wrap {
+  display: flex;
+  margin-top: 1.25rem;
+}
+
+.ad-banner {
+  min-width: 15%;
+  background-color: #f1f1f1;
+  margin-left: 1.25rem;
+}
+
+@media screen and (max-width: 1080px) {
+
+  .ad-banner {
+    display: none;
+    margin-left: 0;
+  }
+
+}
+
+
+@media screen and (max-width: 680px) {
+
+  //.ad-banner {
+  //  display: flex;
+  //  margin-left: 1.25rem;
+  //  min-width: 30%;
+  //}
+
+}
+
+//@media screen and (max-width: 600px) {
+//
+//  .ad-banner {
+//    display: none;
+//    margin-left: 0;
+//  }
+//
+//}
+
+
 
 
 

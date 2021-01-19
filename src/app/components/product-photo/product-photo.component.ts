@@ -48,15 +48,15 @@ export class ProductPhotoComponent implements OnInit {
   responsiveOptions:any[] = [
     {
       breakpoint: '1024px',
-      numVisible: 5
-    },
-    {
-      breakpoint: '768px',
       numVisible: 3
     },
     {
+      breakpoint: '680px',
+      numVisible: 6
+    },
+    {
       breakpoint: '560px',
-      numVisible: 1
+      numVisible: 3
     }
   ];
 

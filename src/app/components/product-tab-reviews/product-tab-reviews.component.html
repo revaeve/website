@@ -26,30 +26,32 @@
     ></app-product-reviews>
   </div>
 
-  <div class="filters">
+  <!-- TODO:LATER включить компонент позже -->
 
-    <app-product-filters-selected
-      *ngIf = "showSelectedFilters"
-      [inputSelectedFiltersAsync]="selectedFilters$"
-    ></app-product-filters-selected>
+<!--  <div class="filters">-->
 
-    <!-- TODO:LATER включить компонент позже -->
+<!--    <app-product-filters-selected-->
+<!--      *ngIf = "showSelectedFilters"-->
+<!--      [inputSelectedFiltersAsync]="selectedFilters$"-->
+<!--    ></app-product-filters-selected>-->
 
-    <!--    <app-product-filters-photo-->
-    <!--      (outputSelectedPhoto) = "updateSelectedFiltersPhoto($event)"-->
-    <!--    ></app-product-filters-photo>-->
 
-    <app-product-filters-rate
-      (outputSelectedStars) = "updateSelectedFiltersStars($event)"
-      [inputRateData]="filterData.rate"
-    ></app-product-filters-rate>
 
-    <product-filters-list-box
-      (outputSelectedWebSites) = "updateSelectedFiltersWebSites($event)"
-      [inputListBoxData]="filterData.listBox"
-    ></product-filters-list-box>
+<!--    <app-product-filters-photo-->
+<!--      (outputSelectedPhoto) = "updateSelectedFiltersPhoto($event)"-->
+<!--    ></app-product-filters-photo>-->
 
-  </div>
+<!--    <app-product-filters-rate-->
+<!--      (outputSelectedStars) = "updateSelectedFiltersStars($event)"-->
+<!--      [inputRateData]="filterData.rate"-->
+<!--    ></app-product-filters-rate>-->
+
+<!--    <product-filters-list-box-->
+<!--      (outputSelectedWebSites) = "updateSelectedFiltersWebSites($event)"-->
+<!--      [inputListBoxData]="filterData.listBox"-->
+<!--    ></product-filters-list-box>-->
+
+<!--  </div>-->
 
 </div>
 

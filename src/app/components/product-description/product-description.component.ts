@@ -15,9 +15,7 @@ export class ProductDescriptionComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log('>> from app-product-description', this.productData);
-  }
+  ngOnInit(): void {}
 
   showMoreAboutProduct() {
     this.showMore = 'about';

@@ -15,8 +15,7 @@ export class ProductReviewsComponent implements OnInit {
     this.reviewPlace = "hotline.ua"
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 
 }

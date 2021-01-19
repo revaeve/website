@@ -1,5 +1,10 @@
 ::ng-deep .tab-menu{
 
+
+  //.tab-menu .p-component .p-tabmenu-nav .p-tabmenuitem .p-menuitem-link {
+  //  margin-top: 2px;
+
+
   .p-component {
     margin-top: 2rem;
 
@@ -12,6 +17,7 @@
           justify-content: center;
           padding-top: 1.25rem;
           padding-bottom: 1.25rem;
+          background: transparent;
         }
         &:not(.p-highlight):not(.p-disabled):hover .p-menuitem-link{
           border-color: var(--primary-color);

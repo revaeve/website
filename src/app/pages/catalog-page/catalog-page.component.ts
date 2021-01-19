@@ -17,6 +17,7 @@ import {ApiCatalogPageModel} from "../../models/api-catalog-page.model";
 })
 export class CatalogPageComponent implements OnInit {
 
+  visibleSidebar1;
   categoryHeading$: Observable<string>;
   categoryId: number;
   products: ProductModel[];
@@ -71,6 +72,8 @@ export class CatalogPageComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    window.scrollTo(0, 0)
 
     // Роутинг
     this.route.params.subscribe((params: Params) => {

@@ -27,6 +27,8 @@ export class MainPageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
+
     this.articlesService.getArticles()
       .then(articles => {
         this.articles = articles;

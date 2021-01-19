@@ -1,29 +1,4 @@
-:root {
-  //--text-color: #4e4e4e;
-  //--text-color-secondary: #676767;
-  --text-color-third: #C4C4C4;
-}
-
-
-
-.heading-text {
-  color: var(--text-color);
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-
-.main-text {
-  color: var(--text-color-secondary);
-  font-weight: 300;
-}
-
-.small-link{
-  color: var(--text-color-third);
-  font-weight: 300;
-}
-
-
-
+@import "styles-primeng.overrides";
 
 html {
   font-size: 14px;

@@ -3,7 +3,7 @@
 
     <div class="review-heading-text">
       <app-rating [stars]="reviewDate.stars"></app-rating>
-      <p class="main-text">Имя???, {{reviewDate.originalCreatedAt |  date }}</p>
+      <p class="main-text">{{reviewDate.author}}, {{reviewDate.originalCreatedAt |  date }}</p>
     </div>
 
     <!-- TODO:LATER включить компонент позже -->

@@ -60,6 +60,7 @@ import {PanelModule} from "primeng/panel";
 import {CatalogPageService} from "./services/catalog-page.service";
 import {CategoriesStore} from "./services/categories.store";
 import { ProductTabSpecificationsComponent } from './components/product-tab-specifications/product-tab-specifications.component';
+import {SidebarModule} from "primeng/sidebar";
 
 
 
@@ -114,6 +115,7 @@ import { ProductTabSpecificationsComponent } from './components/product-tab-spec
     PanelModule,
     DialogModule,
     RippleModule,
+    SidebarModule,
 
     RouterModule.forRoot([
       {path:'',component: AppComponent},

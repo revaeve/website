@@ -1,5 +1,6 @@
 export interface ReviewsModel {
   cons: string
+  author: string
   id: number
   language: string
   link: string

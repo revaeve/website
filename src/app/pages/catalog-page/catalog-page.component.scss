@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: column;
   }
+
 }
 
 .products-catalog-heading-text {
@@ -38,38 +39,60 @@
   font-weight: 500;
 }
 
-@media screen and (max-width: 576px) {
-  :host ::ng-deep .product-list-item {
-    flex-direction: column;
-    align-items: center;
-
-    img {
-      width: 75%;
-      margin: 2rem 0;
-    }
-
-    .product-list-detail {
-      text-align: center;
-    }
-
-    .product-price {
-      align-self: center;
-    }
-
-    .product-list-action {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .product-list-action {
-      margin-top: 2rem;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-  }
+.button-filters-mobile {
+  display: none;
 }
+
+
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+
+  .products-catalog-filters-web {
+    display: none !important;
+  }
+
+  .button-filters-mobile {
+    display: flex;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+
+
+  .data-view-button{
+    display: none !important;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+
+  .input-products-search {
+    display: none;
+  }
+
+  .products-catalog-wrap{
+    flex-direction: column;
+  }
+
+  .products-catalog {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+}
+
+
+
+
+
+
 
 
 

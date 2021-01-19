@@ -17,12 +17,20 @@
     </div>
 
 
-    <!--  ОПИСАНИЕ ПРОДУКТА  -->
-    <app-product-description
-      *ngIf="!!productData"
-      [productData]="productData"
-      (onShowMore)="updateSelectedTab($event)"
-    ></app-product-description>
+
+    <div class="product-description-wrap">
+
+      <!--  ОПИСАНИЕ ПРОДУКТА  -->
+      <app-product-description
+        *ngIf="!!productData"
+        [productData]="productData"
+        (onShowMore)="updateSelectedTab($event)"
+      ></app-product-description>
+
+      <!--  Реклама  -->
+      <div  class="ad-banner"></div>
+
+    </div>
 
     <!--  --------------------------------------------------------------------------------------  -->
 
