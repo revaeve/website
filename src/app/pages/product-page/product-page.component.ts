@@ -20,7 +20,7 @@ export class ProductPageComponent implements OnInit {
   sumRating: number;
 
   constructor(
-    // TODO: MAYBEDONE Please rename 'ProductService' => 'ProductPageService' and file name as well
+    // TODO: Please rename 'ProductService' => 'ProductPageService' and file name as well
     private productService: ProductService,
     private reviewsService: ReviewsService,
     private route: ActivatedRoute
@@ -48,7 +48,6 @@ export class ProductPageComponent implements OnInit {
     this.selectedTab = "reviews";
 
   }
-
 
   updateSelectedTab(tab) {
     this.selectedTab = tab;
